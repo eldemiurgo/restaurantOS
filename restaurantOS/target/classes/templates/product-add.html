@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Agregar Producto</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Agregar Producto</h3>
+    <div>
+
+        <form action="#" method="post"
+              th:object="${product}"
+              th:action="@{/products/save}"
+        >
+
+            <div class="form-group">
+                <label for="name">Descripcion</label>
+                <input type="text" id="name"
+                       class="form-controller"
+                       placeholder="ingrese nombre"
+                       th:field="*{description}">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Tipo</label>
+                <input type="text" id="lastname"
+                       class="form-controller"
+                       placeholder="ingrese apellido"
+                       th:field="*{type}">
+            </div>
+            <div class="form-group">
+                <label for="address">Precio</label>
+                <input type="text" id="address"
+                       class="form-controller"
+                       placeholder="ingrese direccion"
+                       th:field="*{price}">
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">
+                Agregar Producto
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>
